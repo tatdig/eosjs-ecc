@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/bin/bash -e
+
+echo "Starting publish edge"
 
 . "${TRAVIS_BUILD_DIR}/scripts/publish-utils.sh";
 

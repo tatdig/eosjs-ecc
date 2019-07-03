@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 setup_git() {
   # Set the user name and email to match the API token holder

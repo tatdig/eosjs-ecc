@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 . "${TRAVIS_BUILD_DIR}/scripts/publish-utils.sh";
 
