@@ -1,6 +1,7 @@
 env:
   global:
     PUBLISH_NPM_LATEST_FROM="master"
+sudo: false
 language: node_js
 node_js:
   - "10.0.0"
@@ -18,10 +19,10 @@ deploy:
       - ./scripts/publish-edge.sh
     on:
       all_branches: true
-  - provider: script
-    skip_cleanup: true
-    script:
-      - ./scripts/publish-tag.sh $PUBLISH_NPM_LATEST_FROM
-    on:
-      tags: true
-      condition: "$TRAVIS_TAG =~ ^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)$"
+  # - provider: script
+  #   skip_cleanup: true
+  #   script:
+  #     - ./scripts/publish-tag.sh $PUBLISH_NPM_LATEST_FROM
+  #   on:
+  #     tags: true
+  #     condition: "$TRAVIS_TAG =~ ^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)$"
