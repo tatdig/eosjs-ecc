@@ -1,3 +1,4 @@
+dist: trusty
 env:
   global:
     PUBLISH_NPM_LATEST_FROM="master"
