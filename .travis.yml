@@ -19,7 +19,7 @@ script:
   - echo 'done ----------'
 deploy:
   - provider: script
-    skip_cleanup: true
+    skip_cleanup: false
     script: 
       - echo 'about to call publish-edge**************'
       - pwd
