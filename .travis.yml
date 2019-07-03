@@ -1,6 +1,8 @@
 language: node_js
 node_js:
-  - "10"
+  - "10.0.0"
 
+before_install:
+  - npm i -g npm@6.4.1  
 script:
   - cd dist && ./run_tests.sh
