@@ -1,4 +1,5 @@
-#!/bin/bash -e
+#!/usr/bin/env bash -e
+set -o errexit
 
 echo "Starting publish edge"
 
