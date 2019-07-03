@@ -2,27 +2,29 @@
 
 echo "Starting publish edge"
 
-. "${TRAVIS_BUILD_DIR}/scripts/publish-utils.sh";
+npm doctor
 
-echo "Running on branch/tag ${TRAVIS_BRANCH}":
+# . "${TRAVIS_BUILD_DIR}/scripts/publish-utils.sh";
 
-echo "Setting up git"
-setup_git
+# echo "Running on branch/tag ${TRAVIS_BRANCH}":
 
-echo "Creating new version"
-git checkout -- .
+# echo "Setting up git"
+# setup_git
 
-git status 
+# echo "Creating new version"
+# git checkout -- .
 
-# get the short commit hash to include in the npm package
-current_commit="$(git rev-parse --short HEAD)";
+# git status 
 
-npm version prerelease -preid "${current_commit}" -no-git-tag-version
+# # get the short commit hash to include in the npm package
+# current_commit="$(git rev-parse --short HEAD)";
 
-git commit -a -m "Updating version [skip ci]"
+# npm version prerelease -preid "${current_commit}" -no-git-tag-version
 
-echo "Publish to NPM"
+# git commit -a -m "Updating version [skip ci]"
 
-cp .npmrc.template $HOME/.npmrc 
+# echo "Publish to NPM"
 
-npm publish --tag edge
+# cp .npmrc.template $HOME/.npmrc 
+
+# npm publish --tag edge
