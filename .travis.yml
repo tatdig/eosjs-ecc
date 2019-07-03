@@ -16,7 +16,7 @@ deploy:
     script: 
       - ./scripts/publish-edge.sh
     on:
-      branch: tmp-edge-test
+      branch:  nelson/add-bintra-deploy
   - provider: script
     skip_cleanup: true
     script:
