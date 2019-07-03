@@ -16,7 +16,7 @@ deploy:
     script: 
       - ./scripts/publish-edge.sh
     on:
-      all_branches: true
+      branch: tmp-edge-test
   - provider: script
     skip_cleanup: true
     script:
