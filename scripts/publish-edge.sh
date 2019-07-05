@@ -1,4 +1,4 @@
-echo "Starting publish edge" && npm doctor 
+echo "Starting publish edge"
 
 # . "${TRAVIS_BUILD_DIR}/scripts/publish-utils.sh";
 
