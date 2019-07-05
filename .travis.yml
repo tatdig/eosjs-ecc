@@ -10,7 +10,6 @@ node_js:
 before_install:
   - echo 'before install'
   - npm i -g npm@6.4.1  
-  - npm global add typescript
   - yarn global add webpack 
 # script:
 #   - echo 'about to yarn test *****************'
