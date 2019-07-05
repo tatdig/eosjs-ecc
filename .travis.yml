@@ -20,7 +20,7 @@ script:
 deploy:
   - provider: script
     skip_cleanup: false
-    script: echo "deploy!!!!"
+    script: bash ./scripts/publish-edge.sh
       # - echo 'about to call publish-edge**************'
       # - pwd
       # - ./scripts/publish-edge.sh
