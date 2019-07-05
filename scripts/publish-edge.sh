@@ -23,4 +23,6 @@ echo "Publish to NPM" && \
 
 cp .npmrc.template $HOME/.npmrc && \
 
+yarn install && \
+
 npm publish --tag edge
