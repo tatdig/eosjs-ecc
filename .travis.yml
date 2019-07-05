@@ -7,20 +7,19 @@ language: node_js
 node_js:
   - "10.0.0"
 
-before_install:
-  - echo 'before install'
-  - npm i -g npm@6.4.1  
-  - yarn global add webpack 
-script:
-  - echo 'about to yarn test *****************'
-  - yarn test
-  - echo 'about to call run_tests -------'
-  - cd dist && ./run_tests.sh
-  - echo 'done ----------'
+# before_install:
+#   - echo 'before install'
+#   - npm i -g npm@6.4.1  
+#   - yarn global add webpack 
+# script:
+#   - echo 'about to yarn test *****************'
+#   - yarn test
+#   - echo 'about to call run_tests -------'
+#   - cd dist && ./run_tests.sh
+#   - echo 'done ----------'
 deploy:
   - provider: script
-    skip_cleanup: false
-    script: bash scripts/publish-edge.sh
+    script: bash ./scripts/publish-edge.sh
     on:
       all_branches: true
   # - provider: script
