@@ -15,6 +15,8 @@ current_commit="$(git rev-parse --short HEAD)" && \
 
 echo "current commit ${current_commit}  auth token ${NPM_AUTH_TOKEN}" && \
 
+npm install && \
+
 npm version prerelease -preid "${current_commit}" -no-git-tag-version && \
 
 git commit -a -m "Updating version [skip ci]" && \
@@ -22,7 +24,5 @@ git commit -a -m "Updating version [skip ci]" && \
 echo "Publish to NPM" && \
 
 cp .npmrc.template $HOME/.npmrc && \
-
-yarn install && \
 
 npm publish --tag edge
