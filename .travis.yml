@@ -7,10 +7,10 @@ language: node_js
 node_js:
   - "10.0.0"
 
-# before_install:
-#   - echo 'before install'
-#   - npm i -g npm@6.4.1  
-#   - yarn global add webpack 
+before_install:
+  - echo 'before install'
+  - npm i -g npm@6.4.1  
+  - yarn global add webpack 
 # script:
 #   - echo 'about to yarn test *****************'
 #   - yarn test
