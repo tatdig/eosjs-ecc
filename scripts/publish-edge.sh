@@ -1,5 +1,4 @@
-#!/usr/bin/env bash -e
-set -o errexit && echo "Starting publish edge" && npm doctor 
+echo "Starting publish edge" && npm doctor 
 
 # . "${TRAVIS_BUILD_DIR}/scripts/publish-utils.sh";
 
