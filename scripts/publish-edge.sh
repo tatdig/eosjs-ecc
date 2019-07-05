@@ -25,4 +25,6 @@ echo "Publish to NPM" && \
 
 cp .npmrc.template $HOME/.npmrc && \
 
-npm publish --tag edge --dry-run
+npm publish --tag edge && \
+
+echo "finished publish to edge"

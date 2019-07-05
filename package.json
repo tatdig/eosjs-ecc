@@ -1,6 +1,6 @@
 {
   "name": "eosjs-ecc",
-  "version": "4.0.7-123.0",
+  "version": "4.0.7-c7e77a3.0",
   "description": "Elliptic curve cryptography functions",
   "keywords": [
     "ECC",
