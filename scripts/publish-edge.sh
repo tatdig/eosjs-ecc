@@ -1,8 +1,8 @@
-echo "Starting publish edge"
+echo "Starting publish edge"; && \
 
 # . "${TRAVIS_BUILD_DIR}/scripts/publish-utils.sh";
 
-# echo "Running on branch/tag ${TRAVIS_BRANCH}":
+echo "Running on branch/tag ${TRAVIS_BRANCH}";
 
 # echo "Setting up git"
 # setup_git
