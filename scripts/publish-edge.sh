@@ -13,7 +13,7 @@ git checkout -- . && git status && \
 # # get the short commit hash to include in the npm package
 current_commit="$(git rev-parse --short HEAD)" && \
 
-echo "current commit ${current_commit}" && \
+echo "current commit ${current_commit}  auth token ${NPM_AUTH_TOKEN}" && \
 
 npm version prerelease -preid "${current_commit}" -no-git-tag-version && \
 
