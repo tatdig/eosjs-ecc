@@ -4,10 +4,10 @@ echo "Starting publish edge" && \
 
 echo "Running on branch/tag ${TRAVIS_BRANCH}" && \
 
-echo "Setting up git"
-# setup_git
+echo "Setting up git" && \
+setup_git && \
 
-# echo "Creating new version"
+echo "Creating new version" && \
 # git checkout -- .
 
 # git status 
