@@ -10,6 +10,8 @@ const keyUtils = require('./key_utils');
 const createHash = require('create-hash')
 const promiseAsync = require('./promise-async')
 
+const wif_prefix = 0x6b; //TDCOIN
+
 const G = secp256k1.G
 const n = secp256k1.n
 
@@ -50,7 +52,7 @@ function PrivateKey(d) {
     function toWif() {
         var private_key = toBuffer();
         // checksum includes the version
-        private_key = Buffer.concat([new Buffer([0x80]), private_key]);
+        private_key = Buffer.concat([new Buffer([wif_prefix]), private_key]);
         return keyUtils.checkEncode(private_key, 'sha256x2')
     }
 
@@ -142,7 +144,7 @@ function parseKey(privateStr) {
     // legacy WIF - checksum includes the version
     const versionKey = keyUtils.checkDecode(privateStr, 'sha256x2')
     const version = versionKey.readUInt8(0);
-    assert.equal(0x80, version, `Expected version ${0x80}, instead got ${version}`)
+    assert.equal(wif_prefix, version, `Expected version ${wif_prefix}, instead got ${version}`)
     const privateKey = PrivateKey.fromBuffer(versionKey.slice(1))
     const keyType = 'K1'
     const format = 'WIF'
